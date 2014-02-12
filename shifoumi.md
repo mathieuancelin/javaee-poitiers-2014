@@ -126,9 +126,11 @@ public class Game extends GenericModel {
         return getId();
     }
 
-    // les mains jouées
-    // le jeu a-t-il été gagné
-    // liste des rounds (one to many)
+    // Il va falloir ajouter les données suivantes :
+    // 
+    // * les mains jouées
+    // * le jeu a-t-il été gagné
+    // * la liste des rounds (one to many)
 
     ...
 }
