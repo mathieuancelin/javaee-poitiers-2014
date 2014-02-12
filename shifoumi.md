@@ -161,7 +161,7 @@ public class Round extends Model {
 
 ```
 
-Voici un exemple de jeu :
+Voici un exemple de jeu au format JSON :
 
 ```json
 {
