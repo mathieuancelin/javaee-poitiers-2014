@@ -1,0 +1,5 @@
+13 févr. 2014 08:42:32,449 INFO  ~ Starting /Users/mathieuancelin/Desktop/javaee-poitiers-2014/shifoumiJB
+13 févr. 2014 08:42:33,107 WARN  ~ You're running Play! in DEV mode
+13 févr. 2014 08:42:33,308 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+13 févr. 2014 08:42:35,271 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+13 févr. 2014 08:42:36,150 INFO  ~ Application 'shifumiJB' is now started !
