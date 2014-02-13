@@ -1,7 +1,36 @@
-Shifoumi
+Shifumi
 ===============
 
-L'application Shifoumi respecte le contrat suivant :
+Le but de cet exercice est de coder une application web permettant de jouer à shifumi.
+
+http://fr.wikipedia.org/wiki/Pierre-feuille-ciseaux
+
+Cependant, ce n'est pas vous qui jouerez mais un bot.
+
+Afin que le bot puisse fonctionner il va falloir lui offrir des APIs REST respectant un certains contrat.
+
+Le déroulement d'un match est le suivant :
+
+une fois que vous pensez vos APIs prêtes,
+
+* connectez vous sur l'arene et vous soumettez votre IP. Préférez le mode IA qui vous affichera les différentes erreurs
+* le bot vas commencer par vous notifier qu'un nouveau doit être créé en base. Il vous fournira l'id de ce jeu afin qu'il puisse y accéder par la suite
+  * vous devez alors créer un nouveau jeu et le sauvegarder en base
+  * vous devez générer les différentes mains à jouer (le bot vous indique le nombre, a vous de déterminer les meilleures stratégies pour gagner au shifumi) au format MAIN:MAIN:MAIN. Les valeurs possibles sont
+    * ROCK
+    * PAPER
+    * SCISSORS
+  * n'oubliez pas de tout bien sauvegarder en base avec le bon id
+* ensuite le bot va venir lire le jeu via son id vous voir quels mains vous avez joué
+* enfin le bot finira le jeu en vous postant le résultat des différents rounds avec votre adversaire ainsi que le gagnant
+
+Vous pouvez soumettre autant de fois que vous voulez pour la mise au point de votre shifumi (en mode IA)
+
+Vous devez également fournir une vue permettant de lister les différents jeux ayant eu lieu ainsi que leur issue
+
+Une fois votre jeu fonctionnel, vous pourrez ensuite tester le match contre un autre étudiant via l'interface de l'arene.
+
+L'application Shifumi respecte le contrat suivant :
 
 
 ```
@@ -159,6 +188,18 @@ public class Round extends Model {
 
 }
 
+```
+
+Voici un exemple de round au format JSON :
+
+```json
+{
+    "yourIp":"127.0.0.1",
+    "opponentIp":"192.168.86.2",
+    "yourHand":"SCISSORS",
+    "opponentHand":"PAPER",
+    "win":true
+}
 ```
 
 Voici un exemple de jeu au format JSON :
