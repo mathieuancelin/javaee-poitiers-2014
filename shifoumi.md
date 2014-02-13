@@ -157,9 +157,9 @@ public class Game extends GenericModel {
 
     // Il va falloir ajouter les données suivantes :
     // 
-    // * les mains jouées
-    // * le jeu a-t-il été gagné
-    // * la liste des rounds (one to many)
+    // * les mains jouées (type String)
+    // * le jeu a-t-il été gagné (type boolean)
+    // * la liste des rounds (one to many, type List<Round>)
 
     ...
 }
